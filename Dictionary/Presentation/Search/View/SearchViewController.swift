@@ -116,12 +116,20 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
 extension SearchViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         let newSearchText = searchController.searchBar.text ?? ""
+
+        if newSearchText.isEmpty {
+            searchText = ""
+            resetPagination()
+            collectionView.reloadData()
+            return
+        }
         
         guard newSearchText !=  searchText else { return }
+        searchText = newSearchText
         
         throttler.throttle { [weak self] in
-            guard let self = self else { return }
-            self.searchText = newSearchText
+            guard let self = self,
+                !self.searchText.isEmpty else { return }
             self.resetPagination()
             self.loadData()
         }
@@ -131,6 +139,8 @@ extension SearchViewController: UISearchResultsUpdating {
 
 extension SearchViewController: SearchView {
     func set(words: [Word]) {
+        guard !searchText.isEmpty else { return }
+        
         hideLoadingUI()
         isLoading = false
         
