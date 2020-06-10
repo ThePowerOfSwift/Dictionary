@@ -70,9 +70,11 @@ extension WordDetailViewController: WordDetailView {
         if let meaning = word.meanings.first {
             update(for: meaning)
         }
-           
-        meanings = word.meanings
-        tableView.reloadData()
+        
+        if word.meanings.count > 1 {
+            meanings = word.meanings
+            tableView.reloadData()
+        }
     }
- 
+    
 }

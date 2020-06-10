@@ -16,7 +16,7 @@ class WordDetailViewMock: WordDetailView {
     }
 }
 
-class SearchPresenterTests: XCTestCase {
+class WordDetailPresenterTests: XCTestCase {
     let view = WordDetailViewMock()
     var presenter: WordDetailPresenter?
 
