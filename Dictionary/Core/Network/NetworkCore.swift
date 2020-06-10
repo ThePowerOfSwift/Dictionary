@@ -29,5 +29,5 @@ protocol Network {
     func performRequest(
         parameters: RequestParameters,
         completion: @escaping (Result<NetworkResponse, Error>) -> ()
-        ) -> URLSessionTask?
+    ) -> URLSessionTask?
 }

@@ -21,7 +21,6 @@ class URLSessionNetwork: Network {
 
         var request = URLRequest(url: url)
         request.httpMethod = parameters.method.rawValue
-        request.allHTTPHeaderFields = ["accept": "application/json"]
 
         let session = URLSession(configuration: .default)
         let task = session.dataTask(with: request, completionHandler: {data, response, error in

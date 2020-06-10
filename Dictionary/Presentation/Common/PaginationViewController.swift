@@ -9,7 +9,6 @@
 import UIKit
 
 class PaginationViewController: BaseViewController {
-    var isAllLoaded = false
     var isLoading = false
     var currentPage = 1
     
@@ -19,7 +18,6 @@ class PaginationViewController: BaseViewController {
     
     func resetPagination() {
         currentPage = 1
-        isAllLoaded = false
         isLoading = false
     }
     
@@ -27,14 +25,13 @@ class PaginationViewController: BaseViewController {
 
 extension PaginationViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        guard !self.isAllLoaded,
-            !self.isLoading else { return }
+        guard !self.isLoading else { return }
         
         let currentOffset = scrollView.contentOffset.y
         let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
         let deltaOffset = maximumOffset - currentOffset
         
-        let bottomOffsetToLoad: CGFloat = 100
+        let bottomOffsetToLoad: CGFloat = 200
         let needLoad = deltaOffset < bottomOffsetToLoad && deltaOffset > 0
         if needLoad {
             self.loadPage()

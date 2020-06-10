@@ -13,7 +13,7 @@ class SearchViewController: PaginationViewController {
     
     private var words: [Word] = []
     private let searchController = UISearchController(searchResultsController: nil)
-    private var searchText = "Default"
+    private var searchText = "type word above"
     private let throttler = Throttler(minimumDelay: 0.5)
     
     var presenter: SearchPresenter!
@@ -56,6 +56,7 @@ class SearchViewController: PaginationViewController {
     
     private func loadData() {
         showLoadingUI()
+        isLoading = true
         presenter.fetchWords(page: currentPage, searchText: searchText)
     }
     
@@ -81,8 +82,10 @@ class SearchViewController: PaginationViewController {
 
 extension SearchViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = view.bounds.width / 2 - 8
-        return CGSize(width: size, height: size)
+        let guide = view.safeAreaLayoutGuide
+        let availableWidth = guide.layoutFrame.size.width
+        let cellSize = availableWidth / 2 - 8
+        return CGSize(width: cellSize, height: cellSize)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -102,7 +105,13 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
         self.showWordDetail(for: word)
     }
     
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        super.scrollViewDidScroll(scrollView)
+        searchController.searchBar.endEditing(true)
+    }
+    
 }
+
 
 extension SearchViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
@@ -123,6 +132,8 @@ extension SearchViewController: UISearchResultsUpdating {
 extension SearchViewController: SearchView {
     func set(words: [Word]) {
         hideLoadingUI()
+        isLoading = false
+        
         self.words += words
         collectionView.reloadData()
     }

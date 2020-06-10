@@ -12,8 +12,6 @@
 		A15B66CB248FF148008914EA /* DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15B66CA248FF148008914EA /* DictionaryTests.swift */; };
 		A1BEB597248DF34B00E7222F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BEB596248DF34B00E7222F /* AppDelegate.swift */; };
 		A1BEB599248DF34B00E7222F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BEB598248DF34B00E7222F /* SceneDelegate.swift */; };
-		A1BEB59B248DF34B00E7222F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BEB59A248DF34B00E7222F /* ViewController.swift */; };
-		A1BEB59E248DF34B00E7222F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1BEB59C248DF34B00E7222F /* Main.storyboard */; };
 		A1BEB5A0248DF34C00E7222F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1BEB59F248DF34C00E7222F /* Assets.xcassets */; };
 		A1BEB5A3248DF34C00E7222F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1BEB5A1248DF34C00E7222F /* LaunchScreen.storyboard */; };
 		A1BEB5B0248DF49000E7222F /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BEB5AF248DF49000E7222F /* SearchPresenter.swift */; };
@@ -68,8 +66,6 @@
 		A1BEB593248DF34B00E7222F /* Dictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1BEB596248DF34B00E7222F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1BEB598248DF34B00E7222F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A1BEB59A248DF34B00E7222F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A1BEB59D248DF34B00E7222F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A1BEB59F248DF34C00E7222F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1BEB5A2248DF34C00E7222F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1BEB5A4248DF34C00E7222F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -171,8 +167,6 @@
 				A1BEB5AD248DF3C500E7222F /* Services */,
 				A1BEB5AC248DF36F00E7222F /* Core */,
 				A1BEB5E8248E8CB400E7222F /* Helpers */,
-				A1BEB59A248DF34B00E7222F /* ViewController.swift */,
-				A1BEB59C248DF34B00E7222F /* Main.storyboard */,
 				A1BEB59F248DF34C00E7222F /* Assets.xcassets */,
 				A1BEB5A1248DF34C00E7222F /* LaunchScreen.storyboard */,
 				A1BEB5A4248DF34C00E7222F /* Info.plist */,
@@ -230,10 +224,10 @@
 		A1BEB5B5248DF4A500E7222F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A1BEB5DF248E877000E7222F /* WordCell */,
 				A1BEB5B6248DF4DD00E7222F /* SearchView.swift */,
 				A1BEB5B1248DF4A000E7222F /* SearchViewController.swift */,
 				A1BEB5B2248DF4A000E7222F /* SearchViewController.xib */,
+				A1BEB5DF248E877000E7222F /* WordCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -446,7 +440,6 @@
 				A15B66C3248FED7D008914EA /* MeaningCell.xib in Resources */,
 				A1BEB5A0248DF34C00E7222F /* Assets.xcassets in Resources */,
 				A1BEB5B4248DF4A000E7222F /* SearchViewController.xib in Resources */,
-				A1BEB59E248DF34B00E7222F /* Main.storyboard in Resources */,
 				A1BEB5E3248E878A00E7222F /* WordCell.xib in Resources */,
 				A1BEB602248E97EF00E7222F /* WordDetailViewController.xib in Resources */,
 			);
@@ -515,7 +508,6 @@
 				A1BEB5F4248E977200E7222F /* WordDetailView.swift in Sources */,
 				A1BEB60D248F2F2500E7222F /* BaseViewController.swift in Sources */,
 				A1BEB5CD248DFAD900E7222F /* Word.swift in Sources */,
-				A1BEB59B248DF34B00E7222F /* ViewController.swift in Sources */,
 				A1BEB5F1248E946000E7222F /* PaginationViewController.swift in Sources */,
 				A1BEB5EC248E8D1000E7222F /* DictionaryServiceFactory.swift in Sources */,
 				A1BEB597248DF34B00E7222F /* AppDelegate.swift in Sources */,
@@ -553,14 +545,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A1BEB59C248DF34B00E7222F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A1BEB59D248DF34B00E7222F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A1BEB5A1248DF34C00E7222F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -24,29 +24,29 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalCompressionResistancePriority="250" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="134" translatesAutoresizingMaskIntoConstraints="NO" id="pSb-Y9-vhK">
-                    <rect key="frame" x="0.0" y="44" width="414" height="148"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="192"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FSn-92-XuN">
-                    <rect key="frame" x="0.0" y="44" width="414" height="148"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="192"/>
                     <subviews>
                         <view alpha="0.34999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QCg-mw-QQJ">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="148"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="192"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="translation" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooj-sW-Oxe">
-                            <rect key="frame" x="8" y="56" width="398" height="36"/>
+                            <rect key="frame" x="8" y="78" width="398" height="36"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="transcription" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fjl-ve-c8Q">
-                            <rect key="frame" x="8" y="104" width="398" height="36"/>
+                            <rect key="frame" x="8" y="126" width="398" height="36"/>
                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Seg-Mf-H1D">
-                            <rect key="frame" x="8" y="8" width="398" height="36"/>
+                            <rect key="frame" x="8" y="30" width="398" height="36"/>
                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -54,7 +54,7 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="Seg-Mf-H1D" firstAttribute="top" secondItem="FSn-92-XuN" secondAttribute="top" constant="8" id="4FO-Q6-t0W"/>
+                        <constraint firstItem="Seg-Mf-H1D" firstAttribute="top" secondItem="FSn-92-XuN" secondAttribute="top" constant="30" id="4FO-Q6-t0W"/>
                         <constraint firstItem="ooj-sW-Oxe" firstAttribute="top" secondItem="Seg-Mf-H1D" secondAttribute="bottom" constant="12" id="8by-2z-cEi"/>
                         <constraint firstAttribute="trailing" secondItem="Fjl-ve-c8Q" secondAttribute="trailing" constant="8" id="Dsb-b7-rmz"/>
                         <constraint firstAttribute="trailing" secondItem="Seg-Mf-H1D" secondAttribute="trailing" constant="8" id="FiI-hb-Cea"/>
@@ -64,7 +64,7 @@
                         <constraint firstItem="QCg-mw-QQJ" firstAttribute="leading" secondItem="FSn-92-XuN" secondAttribute="leading" id="SP5-2R-OiP"/>
                         <constraint firstItem="QCg-mw-QQJ" firstAttribute="top" secondItem="FSn-92-XuN" secondAttribute="top" id="V7N-g6-hHE"/>
                         <constraint firstItem="Fjl-ve-c8Q" firstAttribute="leading" secondItem="FSn-92-XuN" secondAttribute="leading" constant="8" id="ZqA-Ou-ZnS"/>
-                        <constraint firstAttribute="bottom" secondItem="Fjl-ve-c8Q" secondAttribute="bottom" constant="8" id="g44-vY-pyd"/>
+                        <constraint firstAttribute="bottom" secondItem="Fjl-ve-c8Q" secondAttribute="bottom" constant="30" id="g44-vY-pyd"/>
                         <constraint firstItem="Fjl-ve-c8Q" firstAttribute="top" secondItem="ooj-sW-Oxe" secondAttribute="bottom" constant="12" id="ltK-Ez-0x6"/>
                         <constraint firstAttribute="trailing" secondItem="ooj-sW-Oxe" secondAttribute="trailing" constant="8" id="mmO-HG-5ee"/>
                         <constraint firstItem="ooj-sW-Oxe" firstAttribute="leading" secondItem="FSn-92-XuN" secondAttribute="leading" constant="8" id="vi7-HW-QBV"/>
@@ -72,7 +72,7 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DsL-h7-sjk">
-                    <rect key="frame" x="0.0" y="192" width="414" height="670"/>
+                    <rect key="frame" x="0.0" y="236" width="414" height="626"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
             </subviews>

@@ -25,17 +25,16 @@ class BackendServiceImplementation: BackendService {
     func request<Model>(
         endpoint: Endpoint,
         for model: Model.Type,
-        completion: @escaping (Result<Model, Error>) -> Void) where Model : Decodable, Model : Encodable {
+        completion: @escaping (Result<Model, Error>) -> Void
+    ) where Model : Codable {
         _ = network.performRequest(parameters: endpoint, completion: { result in
             switch result {
             case .success(let response):
-                let s = String(data: response.data!, encoding: .utf8)!
-                print(s)
                 if let data = response.data,
                     let object = try? JSONDecoder().decode(model, from: data) {
                     completion(.success(object))
                 } else {
-                    let error = NSError(domain: "error", code: 0, userInfo: nil)
+                    let error = NSError(domain: "parsing error", code: 0, userInfo: nil)
                     completion(.failure(error))
                 }
 
